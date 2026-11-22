@@ -1,0 +1,141 @@
+/* ===================== Dashboard ===================== */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.kpi-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.kpi-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.kpi-card__label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.kpi-card__icon {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  background: var(--blue-light);
+  color: var(--blue-main);
+}
+
+.kpi-card__icon--green {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.kpi-card__icon--orange {
+  background: #fdeee6;
+  color: #b2471b;
+}
+
+.kpi-card__icon--violet {
+  background: #efedfb;
+  color: #5141c1;
+}
+
+.kpi-card__value {
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+.kpi-card__delta,
+.kpi-card__hint {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.kpi-card__delta strong {
+  font-weight: 650;
+}
+
+.kpi-card__delta.is-good svg,
+.kpi-card__delta.is-good strong {
+  color: var(--success);
+}
+
+.kpi-card__delta.is-bad svg,
+.kpi-card__delta.is-bad strong {
+  color: var(--danger);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  transition: opacity 0.2s;
+}
+
+.dashboard-grid.is-refreshing {
+  opacity: 0.6;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.chart-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.recent-card {
+  grid-column: span 2;
+}
+
+@media (max-width: 1280px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .span-2,
+  .recent-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 860px) {
+  .dashboard-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .span-2,
+  .recent-card {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .kpi-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .kpi-card__value {
+    font-size: 1.45rem;
+  }
+}

@@ -1,0 +1,125 @@
+/* ===== Tokens de design (mesma identidade visual da tela de login) ===== */
+:root {
+  --blue-light: #e6f1fb;
+  --blue-mid: #378add;
+  --blue-main: #185fa5;
+  --blue-dark: #0c447c;
+
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a5672;
+  --text-muted: #6b7a99;
+
+  --bg-page: #f0f4fa;
+  --bg-card: #ffffff;
+  --bg-subtle: #f7f9fd;
+
+  --border: rgba(24, 95, 165, 0.18);
+  --border-soft: rgba(24, 95, 165, 0.1);
+
+  --success: #127a3a;
+  --success-bg: #e5f5eb;
+  --danger: #b42318;
+  --danger-bg: #fdecea;
+  --warning: #8a5a00;
+  --warning-bg: #fff4dc;
+  --info: var(--blue-main);
+  --info-bg: var(--blue-light);
+
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+
+  --shadow-card: 0 1px 2px rgba(16, 40, 80, 0.04), 0 8px 24px rgba(24, 95, 165, 0.06);
+  --shadow-pop: 0 12px 32px rgba(16, 40, 80, 0.16);
+  --focus-ring: 0 0 0 3px rgba(24, 95, 165, 0.28);
+
+  --sidebar-width: 248px;
+  --topbar-height: 64px;
+
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-primary);
+  background: var(--bg-page);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--bg-page);
+  overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea,
+a {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+img,
+svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

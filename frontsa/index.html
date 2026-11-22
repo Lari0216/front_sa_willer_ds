@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USUÁRIO</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <div class="login-card">
+
+      <div class="avatar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+      </div>
+
+      <h1 class="login-title">LOGIN</h1>
+
+      <div class="input-group">
+        <input type="email" id="EMAIL" placeholder="E-MAIL" autocomplete="off" />
+        <span class="input-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </span>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="SENHA" placeholder="SENHA" />
+        
+        <span class="input-icon" id="toggle-senha" style="cursor: pointer; pointer-events: auto;" title="Mostrar/Ocultar Senha">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </span>
+      </div>
+
+      <button type="button" class="btn-login" id="btn-login">LOGIN</button>
+      <button type="button" class="btn-login" id="btn-cadastrar" style="background-color: #6b7a99; margin-top: -5px;">CADASTRAR</button>
+      
+      <a href="#" id="link-esqueci-senha" class="link-esqueci-senha">Esqueci minha senha</a>
+
+    </div> <div id="meu-popup" class="popup">
+      <div class="popup-conteudo">
+        <h2 id="popup-titulo"></h2>
+        <p id="popup-mensagem"></p>
+        <button id="btn-fechar-popup" class="btn-fechar-popup">OK</button>
+      </div>
+    </div>
+
+  </div> <script src="script.js"></script>
+
+
+
+</body>
+</html>
